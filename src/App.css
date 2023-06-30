@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+.nav-text {
+  display: inline-block;
+  position: relative;
+  color: #ff0000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-text:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff0303;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-text:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-logo{
+  width: 8%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.car-img{
+  height: 650px;
 }
